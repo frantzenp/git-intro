@@ -9,3 +9,4 @@ Gemfile.lock
 /.idea/git-intro.iml
 /.idea/misc.xml
 /.idea/modules.xml
+.DS_Store
