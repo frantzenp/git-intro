@@ -6,3 +6,6 @@ Gemfile.lock
 *.swp
 *~
 .jekyll-cache/
+/.idea/git-intro.iml
+/.idea/misc.xml
+/.idea/modules.xml
