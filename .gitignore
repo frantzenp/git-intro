@@ -8,3 +8,6 @@ Gemfile.lock
 .jekyll-cache/
 .DS_Store
 gcc-4.2
+/.idea/git-intro.iml
+/.idea/misc.xml
+/.idea/modules.xml

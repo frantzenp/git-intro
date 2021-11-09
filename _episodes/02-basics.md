@@ -25,10 +25,13 @@ keypoints:
 - Git is a *version control system*: can record snapshots and track the content of a folder as it changes over time.
 - Every time we **commit** a snapshot, Git records a snapshot of the **entire project**, saves it, and assigns it a version.
 - These snapshots are kept inside a sub-folder called `.git`.
+- <span style="color:green"> Add a simple explaination of whata reposirory is </span>
 - If we remove `.git`, we remove the repository and history (but keep the working directory!).
-- `.git` uses relative paths - you can move the whole thing somewhere else and it will still work
+
+- <span style="color:red">`.git` uses relative paths - you can move the whole thing somewhere else and it will still work
+</span>
 - Git doesn't do anything unless you ask it to (it does not record anything automatically).
-- Multiple interfaces to Git exist (command line, graphical interfaces, web interfaces).
+- Multiple interfaces to Git exist (command line, graphical interfaces, web interfaces) - <span style="color:green"> (this will be treated later) </span>.
 
 ---
 
@@ -38,7 +41,7 @@ keypoints:
 - We will record changes always in two steps (we will later explain why this is a recommended practice):
 
 ```shell
-$ git add somefile.txt
+$ git add somefile.txt 
 $ git commit
 
 $ git add file.txt anotherfile.txt
@@ -59,11 +62,15 @@ $ git commit
 {: .challenge}
 
 ---
+<span style="color:red">
 
 ## Before we start we need to configure Git
-
+<span style="color:red">
 If you haven't already configured Git, please follow the instructions in the
 [Git refresher lesson](https://coderefinery.github.io/git-refresher/01-setup/#configuring-git)
+</span>
+
+</span>
 
 ---
 
@@ -81,10 +88,11 @@ Let us start.
 One of the basic principles of Git is that it is **easy to create repositories**:
 
 ```shell
-$ mkdir recipe
+$ mkdir recipe 
 $ cd recipe
 $ git init
 ```
+<span style="color:green"> In the shell example, comments must be added to explain steps</span>
 
 That's it! We have now created an empty Git repository.
 
@@ -176,6 +184,7 @@ $ git commit -m "adding ingredients and instructions"
  create mode 100644 ingredients.txt
  create mode 100644 instructions.txt
 ```
+<span style="color:green"> Note: we will discuss why and what to write in commit messages shortly!</span>
 
 Right after we query the status to get this useful command into our muscle memory:
 
@@ -228,11 +237,13 @@ Date:   Thu May 4 15:02:56 2017 +0200
 > to "enjoy!" to `instructions.txt`. Do not stage the changes yet.
 >
 > When you are done editing the files, try `git diff`:
->
+> 
+> <span style="color:green"> Text should be added here to explain what git diff does and how to read/understand the output</span>
+
 > ```shell
 > $ git diff
 > ```
->
+> 
 > ```
 > diff --git a/ingredients.txt b/ingredients.txt
 > index 2607525..ec0abc6 100644
@@ -262,37 +273,49 @@ Date:   Thu May 4 15:02:56 2017 +0200
 > $ git add instructions.txt
 > $ git commit                   # <-- we have left out -m "..."
 > ```
->
+> <span style="color:red">
 > When you leave out the `-m` flag, Git should open an editor where you can edit
 > your commit message. This message will be associated and stored with the
 > changes you made. This message is your chance to explain what you've done and
 > convince others (and your future self) that the changes you made were
 > justified.  Write a message and save and close the file.
->
+> </span> <span style="color:green"> Move this section to the first git commit explaination </span>
+
 > When you are done committing the changes, experiment with these commands:
 >
+> 
+> 
 > ```shell
 > $ git log    # show commit logs
 > $ git show   # show various types of objects
 > $ git diff   # show changes
 > ```
-{: .challenge}
 
-> ## (Optional) Exercise: Comparing and showing commits
+
+
+> <span style="color:red"> 
 >
+>## (Optional) Exercise: Comparing and showing commits
+> 
+> <span style="color:red"> 
 > 1. Inspect differences between commit hashes with `git diff <hash1> <hash2>`.
-> 2. Have a look at specific commits with `git show <hash>`.
-{: .challenge}
+> 2. Have a look at specific commits with `git show <hash>`. 
+> </span>
+> </span>
 
+> <span style="color:red"> 
+>
 > ## (Optional) Exercise: Renaming and removing files
 >
+> <span style="color:red"> 
 > 1. Create a new file, `git add` and `git commit` the file.
 > 2. Rename the file with `git mv` (you will need to `git commit` the rename).
 > 3. Use `git log --oneline` and `git status`.
 > 4. Remove the file with `git rm` (again you need to `git commit` the change).
 > 5. Inspect the history with `git log --stat`. Can you recover the removed file from the Git history?
 >    Hint: You can try with a web search for "git checkout removed file from past".
-{: .challenge}
+> </span>
+> </span>
 
 > ## (Optional) Exercise: Visual diff tools
 >
@@ -322,6 +345,8 @@ Date:   Thu May 4 15:02:56 2017 +0200
 ---
 
 ### Writing useful commit messages
+<span style="color:green"> This section should be moved to just below the introduction of the git commit command
+</span>
 
 Using `git log --oneline` we understand that the first line of the commit message is very important.
 
@@ -359,16 +384,21 @@ Good references:
 
 - Should we add and track all files in a project?
 - How about generated files?
-- Why is it considered a bad idea to commit compiled binaries to version control?
+- <span style="color:red"> Why is it considered a bad idea to commit compiled binaries to version control? </span>
 - What types of generated files do you know?
+- <span style="color:red"> Would you track a data set you read for an assignment?</span>
+- <span style="color:green"> Focus here should be more on data set / other types of files rather than compiled binaries</span>
 
+<span style="color:red"> 
 As a general rule compiled files are not
 committed to version control. There are many reasons for this:
-
+</span>
+<span style="color:red"> 
 - Your code could be run on different platforms.
 - These files are automatically generated and thus do not contribute in any meaningful way.
 - The number of changes to track per source code change can increase quickly.
 - When tracking generated files you could see differences in the code although you haven't touched the code.
+</span>
 
 For this we use `.gitignore` files. Example:
 
@@ -378,13 +408,15 @@ For this we use `.gitignore` files. Example:
 # ignore compiled python 3 files
 __pycache__
 ```
-
+<span style="color:red">
 `.gitignore` uses something called a
 [shell glob syntax](https://en.wikipedia.org/wiki/Glob_(programming)) for
 determining file patterns to ignore. You can read more about the syntax in the
 [documentation](https://git-scm.com/docs/gitignore).
-
+</span>
+<span style="color:red">
 An example taken from [documentation](https://git-scm.com/docs/gitignore):
+</span>
 
 ```
 # ignore objects and archives, anywhere in the tree.
@@ -402,6 +434,7 @@ relatively.
 
 `.gitignore` should be part of the repository (why?).
 
+<span style="color:green"> Using the git ignore command to add files to git ignore should also be discussed here </span>
 
 #### Clean working area
 
@@ -410,8 +443,11 @@ relatively.
 - **All files should be either tracked or ignored**.
 
 ---
+<span style="color:red">
 
 ## Graphical user interfaces
+</span>
+<span style="color:red"> This section can be treated for only a single GUI tool and at a different location in the learning module</span>
 
 We have seen how to make commits directly via the GitHub website, and also via command line.
 But it is also possible to work from within a Git graphical user interface (GUI):
@@ -447,8 +483,10 @@ $ git show    # show the change for a specific commit
 $ git mv      # move tracked files
 $ git rm      # remove tracked files
 ```
+<span style="color:red"> git rm and git mv could be removed</span>
 
-Git is not ideal for large binary files
+Git is not ideal for<span style="color:red">  large binary files</span> <span style="color:green">  large data sets / files / (not code) </span>
+
 (for this consider [http://git-annex.branchable.com](http://git-annex.branchable.com)).
 
 
