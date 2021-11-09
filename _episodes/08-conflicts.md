@@ -240,8 +240,9 @@ Simple steps:
   - The file(s) should now look exactly how you want them.
 - Check status with `git status` and `git diff`.
 - Tell Git that you have resolved the conflict with `git add ingredients.txt`
-  (if you use the Emacs editor with a certain plugin the editor may stage the
-  change for you after you have removed the conflict markers).
+  <span style="color:red"> (if you use the Emacs editor with a certain plugin the editor may stage the
+  change for you after you have removed the conflict markers).</span>
+
 - Verify the result with `git status`.
 - Finally commit the merge with just `git commit` - everything is pre-filled.
 
@@ -260,18 +261,27 @@ Simple steps:
 
 ---
 
+> <span style="color:red">  
+> 
 > ## (Optional) Exercise: Conflicts and rebase
->
+> </span>
+> <span style="color:red">  
 > 1. Create two branches where you anticipate a conflict.
 > 2. Try to merge them and observe that indeed they conflict.
 > 3. Abort the merge.
 > 4. What do you expect will happen if you rebase one branch on top of the
 >    other? Do you anticipate a conflict? Try it out.
 {: .challenge}
+</span>
 
 ---
-
+> <span style="color:red">  
+> 
 > ## (Optional) Resolution using mergetool
+> </span>
+> <span style="color:red">  
+> Skip this optional section
+> </span>
 >
 > - Again create a conflict (for instance disagree on the number of avocados).
 > - Stop at this stage:
