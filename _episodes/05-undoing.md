@@ -135,7 +135,7 @@ you have more practice!
 ---
 
 ## (optional) Adding to the previous commit
-
+<span style="color:red"> Skip this exercise and maybe discuss shortly in an optional overview of commands not discussed </span>
 Sometimes we commit but realize we forgot something.
 We can amend to the last commit:
 
@@ -172,8 +172,9 @@ point in the past.
   lot before and after.
 
 > ## Exercise: Destroy our experimentation in this episode
->
-> After we have experimented with reverts and amending, let us destroy
+> <span style="color:green"> This exercise could be changed to an example. </span>
+
+> After we have experimented with reverts <span style="color:red"> and amending</span>, let us destroy
 > all of that and get our repositories to a similar state.
 >
 > - First, we will look at our history (`git log`/`git graph`) and
@@ -207,8 +208,8 @@ point in the past.
 
 > ## Test your understanding
 >
-> 1. What happens if you accidentally remove a tracked file with `git rm`, is it gone forever?
-> 2. Is it OK to modify commits that nobody has seen yet?
+> <span style="color:red"> 1. What happens if you accidentally remove a tracked file with `git rm`, is it gone forever?</span>
+> <span style="color:red"> 2. Is it OK to modify commits that nobody has seen yet? </span>
 > 3. What situations would justify to modify the Git history and possibly remove commits?
 >
 > > ## Solution
