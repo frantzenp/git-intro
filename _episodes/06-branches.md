@@ -18,6 +18,8 @@ keypoints:
 
 ## Motivation for branches
 
+<span style="color:green"> It is maybe nice to change the 'master' terminology to 'main' [https://www.jumpingrivers.com/blog/git-moving-master-to-main/](https://www.jumpingrivers.com/blog/git-moving-master-to-main/) </span>
+
 In the previous section we tracked a guacamole recipe with Git.
 
 Up until now our repository had only one branch with one commit coming
@@ -165,10 +167,8 @@ $ git graph
 - We commit our changes to this branch.
 
 ---
-><span style="color:red">
->
+
 > ## Interlude: Different meanings of "checkout"
-></span>
 > <span style="color:red"> This section could be removed
 > </span>
 >
@@ -279,15 +279,15 @@ $ git graph
 {: .challenge}
 
 ---
-<span style="color:red"> 
+
 
 ## Merging branches
-</span>
+<span style="color:red"> This section /  following cell can be removed but maybe kept somewhere else for troubleshooting </span>
+
 **If you got stuck in the above exercises**:
 
 - **Skip this unless you got stuck**.
 
-<span style="color:red"> This section /  following cell can be removed but maybe kept somewhere else for troubleshooting </span>
 
 - Step out of the current directory: `$ cd ..`
 - Then:
@@ -476,10 +476,9 @@ may have a hard time finding them as there is no branch pointing to them.
 > few months later. If you give them a go, keep in mind that you might run into conflicts,
 > which we will learn to resolve in the next section.
 
-> <span style="color:red">
->
+
+
 > ## (Optional) Exercise: Moving commits to another branch
-> </span>
 > <span style="color:red"> Skip this exercise or provide it as optional
 > </span>
 > Sometimes it happens that we commit to the wrong branch, e.g. to `master`
@@ -491,10 +490,8 @@ may have a hard time finding them as there is no branch pointing to them.
 > 3. Inspect the situation with `git graph`. Problem solved!
 {: .challenge}
 
-> <span style="color:red">
->
+
 > ## (Optional) Exercise: Rebasing
-> </span>
 > <span style="color:red"> Skip this exercise
 > </span>
 > As an alternative to merging branches, one can also *rebase* branches.
@@ -508,10 +505,8 @@ may have a hard time finding them as there is no branch pointing to them.
 > 5. Inspect again the situation with `git graph`. Notice that the commit hashes have changed - think about why!
 {: .challenge}
 
-> <span style="color:red">
->
+
 > ## (Optional) Exercise: Squashing commits
-> </span>
 > <span style="color:red"> Skip this exercise or provide it as optional
 > </span>
 > Sometimes you may want to *squash* incomplete commits, particularly before
@@ -582,10 +577,8 @@ $ git branch -D wild-idea      # it is gone, off to a new idea
 No problem: we worked on a branch, branch is deleted, `master` is clean.
 
 ---
-> <span style="color:red"> 
->
+
 > ## (Optional) Tags
-> </span>
 > <span style="color:red"> Skip this section
 > </span>
 > - A tag is a pointer to a commit but in contrast to a branch it does not move.

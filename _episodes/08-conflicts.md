@@ -261,26 +261,22 @@ Simple steps:
 
 ---
 
-> <span style="color:red">  
-> 
+
 > ## (Optional) Exercise: Conflicts and rebase
-> </span>
-> <span style="color:red">  
+> <span style="color:red"> Skip this exercise </span>
 > 1. Create two branches where you anticipate a conflict.
 > 2. Try to merge them and observe that indeed they conflict.
 > 3. Abort the merge.
 > 4. What do you expect will happen if you rebase one branch on top of the
 >    other? Do you anticipate a conflict? Try it out.
 {: .challenge}
-</span>
+
 
 ---
-> <span style="color:red">  
-> 
+
 > ## (Optional) Resolution using mergetool
-> </span>
 > <span style="color:red">  
-> Skip this optional section
+> Skip this section
 > </span>
 >
 > - Again create a conflict (for instance disagree on the number of avocados).
@@ -330,7 +326,7 @@ Simple steps:
 ---
 
 ## Using "ours" or "theirs" strategy
-
+<span style="color:red"> This section could also be skipped (it's quite specific)</span>
 - Sometimes you know that you want to keep "ours" version (version on this branch)
   or "theirs" (version on the merged branch).
 - Then you do not have to resolve conflicts manually.
