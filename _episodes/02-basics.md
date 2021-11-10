@@ -49,7 +49,7 @@ $ git commit
 ```
 
 - We first focus (`git add`, we "stage" the change), then shoot (`git commit`):
-
+- <span style="color:red"> The picture below should be more clear </span>
 ![Git staging]({{ site.baseurl }}/img/git_stage_commit.svg
 "git staging and committing"){:class="img-responsive" style="max-width:70%"}
 
@@ -62,7 +62,7 @@ $ git commit
 {: .challenge}
 
 ---
-<span style="color:red">
+
 
 ## Before we start we need to configure Git
 <span style="color:red">
@@ -70,7 +70,6 @@ If you haven't already configured Git, please follow the instructions in the
 [Git refresher lesson](https://coderefinery.github.io/git-refresher/01-setup/#configuring-git)
 </span>
 
-</span>
 
 ---
 
@@ -92,7 +91,8 @@ $ mkdir recipe
 $ cd recipe
 $ git init
 ```
-<span style="color:green"> In the shell example, comments must be added to explain steps</span>
+<span style="color:green"> In the shell example, comments must be added to explain steps. Also, it would be nice to have 
+a way of better representation of what are input lines and what are output lines in the shell examples besides the $ sign.</span>
 
 That's it! We have now created an empty Git repository.
 
@@ -110,7 +110,8 @@ nothing to commit (create/copy files and use "git add" to track)
 
 We will make sense of this information during this morning.
 
-Let us now **create two files**.
+<span style="color:red"> Let us now **create two files**. </span> <span style="color:green"> Explain in more detail that
+these text files are analogy for code and just provide them instead of making them.</span>
 
 One file is called `instructions.txt` and contains:
 
@@ -184,7 +185,7 @@ $ git commit -m "adding ingredients and instructions"
  create mode 100644 ingredients.txt
  create mode 100644 instructions.txt
 ```
-<span style="color:green"> Note: we will discuss why and what to write in commit messages shortly!</span>
+<span style="color:green"> This might be a good point to explain commit messages!</span>
 
 Right after we query the status to get this useful command into our muscle memory:
 
@@ -192,19 +193,20 @@ Right after we query the status to get this useful command into our muscle memor
 $ git status
 ```
 
-What does the `-m` flag mean? Let us check the help page for that command:
+<span style="color:red">  What does the `-m` flag mean? Let us check the help page for that command: </span>
+<span style="color:green">(shell example below could also be removed)</span>
 
 ```shell
 $ git help commit
 ```
-
+<span style="color:red">
 You should see a very long help page as the tool is very versatile (press q to quit).
 Do not worry about this now but keep in mind that you can always read the help files
 when in doubt. Searching online can also be useful, but choosing search terms
 to find relevant information takes some practice and discussions in some
 online threads may be confusing.
 Note that help pages also work when you don't have a network connection!
-
+</span>
 
 ### Git history and log
 
@@ -220,9 +222,9 @@ Date:   Thu May 4 15:02:56 2017 +0200
     adding ingredients and instructions
 ```
 
-- We can browse the development and access each state that we have committed.
+- We can browse the development and access each state <span style="color:green"> of our tracked files </span> that we have committed.
 - The long hashes uniquely label a state of the code.
-- They are not just integers counting 1, 2, 3, 4, ... (why?).
+- <span style="color:red">They are not just integers counting 1, 2, 3, 4, ... (why?).</span>
 - Output is in reverse chronological order, i.e. newest commits on top.
 - We will use them when comparing versions and when going back in time.
 - `git log --oneline` only shows the first 7 characters of the commit hash and is good to get an overview.
@@ -293,34 +295,34 @@ Date:   Thu May 4 15:02:56 2017 +0200
 
 
 
-> <span style="color:red"> 
+
 >
 >## (Optional) Exercise: Comparing and showing commits
 > 
-> <span style="color:red"> 
+> <span style="color:red"> Skip this exercise </span>
 > 1. Inspect differences between commit hashes with `git diff <hash1> <hash2>`.
 > 2. Have a look at specific commits with `git show <hash>`. 
-> </span>
-> </span>
+> 
 
-> <span style="color:red"> 
+
+
 >
 > ## (Optional) Exercise: Renaming and removing files
 >
-> <span style="color:red"> 
+> <span style="color:red">  Skip this exercise </span>
 > 1. Create a new file, `git add` and `git commit` the file.
 > 2. Rename the file with `git mv` (you will need to `git commit` the rename).
 > 3. Use `git log --oneline` and `git status`.
 > 4. Remove the file with `git rm` (again you need to `git commit` the change).
 > 5. Inspect the history with `git log --stat`. Can you recover the removed file from the Git history?
 >    Hint: You can try with a web search for "git checkout removed file from past".
-> </span>
-> </span>
+
+
 
 > ## (Optional) Exercise: Visual diff tools
 >
 > - Make further modifications and experiment with `git difftool` (requires installing one of the [visual diff tools](https://coderefinery.github.io/installation/difftools/)):
->
+> <span style="color:red"> This should be changed to the diff tool of choice (already installed) </span>
 > On Windows or Linux:
 > ```
 > $ git difftool --tool=meld
@@ -443,10 +445,8 @@ relatively.
 - **All files should be either tracked or ignored**.
 
 ---
-<span style="color:red">
 
 ## Graphical user interfaces
-</span>
 <span style="color:red"> This section can be treated for only a single GUI tool and at a different location in the learning module</span>
 
 We have seen how to make commits directly via the GitHub website, and also via command line.
